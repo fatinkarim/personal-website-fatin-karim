@@ -23,15 +23,71 @@
            
 		}
 
+		body, html 
+		{
+            height: 100%;
+        }
+
+        .hero-image 
+        {
+        	background-image: url(image/fatinkarim1.png);
+        	height: 50%;
+        	width: auto;
+        	background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+   
+
 
 	</style>
 </head>
 <body>
+    
+    <div class="hero-image"></div>
 
-	<ul>
+<center>
+   <div id="clock">17:56:00</div> 
+  
+    <script> 
+        setInterval(showTime, 1000); 
+        function showTime() { 
+            let time = new Date(); 
+            let hour = time.getHours(); 
+            let min = time.getMinutes(); 
+            let sec = time.getSeconds(); 
+            am_pm = "AM"; 
+  
+            if (hour > 12) { 
+                hour -= 12; 
+                am_pm = "PM"; 
+            } 
+            if (hour == 0) { 
+                hr = 12; 
+                am_pm = "AM"; 
+            } 
+  
+            hour = hour < 10 ? "0" + hour : hour; 
+            min = min < 10 ? "0" + min : min; 
+            sec = sec < 10 ? "0" + sec : sec; 
+  
+            let currentTime = hour + ":"  
+                + min + ":" + sec + am_pm; 
+  
+            document.getElementById("clock") 
+                .innerHTML = currentTime; 
+        } 
+  
+        showTime(); 
+    </script> 
+   </center>
+
+   <ul>
 		<li><a href= "index.html" target="blank">Home</a></li>
 		<li><a href= "about_me.html" target="blank">About Me</a></li>
-	    <li><a href= "hobbies.html" target="blank">Hobby</a></li>
+	    <li><a href= "hobbies.html" target="blank">Hobby</a></li>	
 		<li><a href= "education.html" target="blank">Education</a></li>
 		<li><a href= "experience.html" target="blank">Experience</a></li>
 		<li><a href= "family.html" target="blank">Family</a></li>
@@ -39,10 +95,11 @@
         <li><a href= "contact.html" target="blank">Contact</a></li>
 	</ul>
 
-
-
 </body>
-      <h1 style="text-align: center; color: lightslategray; font-family: georgia;"> <b>WELCOME TO MY PERSONAL WEBSITE!</b></h1>
+<center>
+  <h1 style="color: lightslategray; font-family: georgia; font-size: 50px;  width: 1000px; height: 60px;"><marquee>WELCOME TO MY PERSONAL WEBSITE!:P</marquee></h1>
+  </center>
+
 
       <a href="image/me.jpg" target="blank" title="FATIN STYAFIQAH BINTI ABDUL KARIM"><img style="border-style: double; border-color: lightslategray; border-width: 10px;" src="image/me.jpg" width="400px" height="400px"></a>
 <p></p>
